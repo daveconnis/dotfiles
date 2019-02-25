@@ -14,3 +14,5 @@ This install script might not work. Also, we're using Oh-my-zsh which changes th
 2. Bin files can go into the .oh-my-zsh git folder as new files.
 
 3. In `.zshrc`, be sure to link the RPROMPT path to where the `git-cwd-info` lives and also give the appropriate access permissions by running `sudo chmod 755 'filename'`
+
+4. Update line 8 in `git-cwd-info` to use `git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'` instead of default.
